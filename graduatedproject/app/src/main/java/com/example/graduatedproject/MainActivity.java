@@ -10,7 +10,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnControlLight;
+    Button btnControlLight,btnFeed;
     DatabaseReference rootRef,demoRef;
 
     @Override
@@ -20,11 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnControlLight = (Button) findViewById(R.id.control_light);
+        btnFeed = (Button) findViewById(R.id.feed_fish);
 
         btnControlLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity2();
+            }
+        });
+        btnFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
             }
         });
 
@@ -38,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivity2() {
         Intent intent = new Intent(this.getApplicationContext(), SecondActivity.class);
+        startActivity(intent);
+    }
+    public void openActivity3() {
+        Intent intent = new Intent(this.getApplicationContext(), ThirdActivity.class);
         startActivity(intent);
     }
 

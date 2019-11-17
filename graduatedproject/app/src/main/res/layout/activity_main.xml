@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="128dp"
         android:text="Smart Fish Feeder"
         android:textColor="@color/colorAccent"
         android:textSize="70px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -31,5 +31,13 @@
         android:text="CONTROL LIGHT"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="140dp"
+        />
+    <Button
+        android:id="@+id/feed_fish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FEED THE FISHS"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="357dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
