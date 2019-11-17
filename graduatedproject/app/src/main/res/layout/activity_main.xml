@@ -8,44 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
-    <Button
-        android:id="@+id/btnTurn"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="428dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="143dp"
-        android:text="Turn On"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnTurnOff"
-        app:layout_constraintHorizontal_bias="0.598"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        />
-    <Button
-        android:id="@+id/btnTurn3"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:text="Turn On"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="479dp"
-        />
-    <Button
-        android:id="@+id/btnTurnOff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="428dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="143dp"
-        android:text="Turn OFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -61,22 +23,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/control_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Light "
-        android:textSize="50px"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="188dp"
-        />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Feed the fishs"
-        android:textSize="50px"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="399dp"
+        android:layout_marginBottom="396dp"
+        android:text="CONTROL LIGHT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="140dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
