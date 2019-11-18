@@ -1,4 +1,4 @@
 # GraduteProject
 
 
-Hi everone, this is my graduate project!!!
+Hi everyone, this is my graduate project!!!
