@@ -100,7 +100,30 @@
             app:cardElevation="8dp"
             android:background="@color/colorAccent"
             app:cardCornerRadius="8dp"
-            ></androidx.cardview.widget.CardView>
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400px"
+                    android:src="@drawable/bulb_on"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="60px"
+                    android:text="Light"
+                    android:textColor="#d4e309"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -112,7 +135,30 @@
             android:background="@color/colorAccent"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
-            ></androidx.cardview.widget.CardView>
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400px"
+                    android:src="@drawable/fish_icon"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="60px"
+                    android:text="Feed"
+                    android:textColor="#02b8eb"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -124,7 +170,29 @@
             android:layout_marginBottom="16dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
-            ></androidx.cardview.widget.CardView>
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400px"
+                    android:src="@drawable/temperature"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="60px"
+                    android:text="Temperature"
+                    android:textColor="#11120c"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -136,7 +204,30 @@
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
             android:background="@color/colorAccent"
-            ></androidx.cardview.widget.CardView>
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400px"
+                    android:src="@drawable/clock"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="60px"
+                    android:text="Schedule"
+                    android:textColor="#0aa643"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
 
     </GridLayout>
 
