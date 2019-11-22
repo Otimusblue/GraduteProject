@@ -10,12 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThirdActivity">
+        <activity android:name=".TimingActivity">
         </activity>
-        <activity android:name=".SecondActivity">
+        <activity android:name=".TempActivity">
         </activity>
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".FeedActivity">
+        </activity>
+        <activity android:name=".LightActivity">
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

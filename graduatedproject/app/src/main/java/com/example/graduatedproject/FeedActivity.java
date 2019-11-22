@@ -3,7 +3,7 @@ package com.example.graduatedproject;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ThirdActivity extends AppCompatActivity {
+public class FeedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

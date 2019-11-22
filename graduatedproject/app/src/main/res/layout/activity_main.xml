@@ -90,6 +90,7 @@
         android:columnCount="2"
         >
         <androidx.cardview.widget.CardView
+            android:id="@+id/light_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -125,6 +126,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/feed_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -160,6 +162,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/temperature_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -194,6 +197,7 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/schedule_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
