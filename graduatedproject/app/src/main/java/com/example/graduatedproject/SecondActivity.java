@@ -1,7 +1,10 @@
 package com.example.graduatedproject;
 
+import android.media.Image;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.firebase.database.DatabaseReference;
@@ -11,6 +14,7 @@ public class SecondActivity extends AppCompatActivity {
 
     Button turnLightOn, turnLightOff;
     DatabaseReference rootRef,demoRef;
+    ImageView bulb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
 
         turnLightOn = (Button) findViewById(R.id.turn_on);
         turnLightOff = (Button) findViewById(R.id.turn_off);
+        bulb = (ImageView) findViewById(R.id.bulb);
 
         //database reference pointing to root of database
         rootRef = FirebaseDatabase.getInstance().getReference();
@@ -31,6 +36,9 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     rootRef.child("LED_STATUS").setValue("ON");
+                    bulb.setImageResource(R.drawable.bulb_on);
+                    Toast.makeText(SecondActivity.this, "Turn on the light!",
+                            Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -42,7 +50,9 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     rootRef.child("LED_STATUS").setValue("OFF");
-                    //  rootRef.child("devices").updateChildren({'light1': "true" });
+                    bulb.setImageResource(R.drawable.bulb_off);
+                    Toast.makeText(SecondActivity.this, "Turn off the light!",
+                            Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
