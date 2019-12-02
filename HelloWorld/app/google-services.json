@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1006733919952",
+    "firebase_url": "https://demoproject-32648.firebaseio.com",
+    "project_id": "demoproject-32648",
+    "storage_bucket": "demoproject-32648.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006733919952:android:1cf9a992e469992fcf40d5",
+        "android_client_info": {
+          "package_name": "com.myproject.smartfishfeeder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006733919952-vfjjc4qme75dd08tk7ii4ilu8a21borb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzszMR4FpJQKqJudSKOF9vYdaDUhGEFpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006733919952-vfjjc4qme75dd08tk7ii4ilu8a21borb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

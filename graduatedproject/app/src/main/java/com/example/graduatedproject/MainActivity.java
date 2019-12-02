@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //database reference pointing to root of database
         rootRef = FirebaseDatabase.getInstance().getReference();
 
-        //database reference pointing to demo node
     }
 
 
