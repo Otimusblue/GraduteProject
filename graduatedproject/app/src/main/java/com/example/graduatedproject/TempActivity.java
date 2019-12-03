@@ -30,11 +30,7 @@ public class TempActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Double temper = (Double) dataSnapshot.child("TEMPER").getValue();
-
                         tempValue.setText(""+temper+"ºC");
-
-
-
             }
 
                 @Override
