@@ -8,12 +8,14 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".TempActivity"
+    android:background="#d9e9fa"
     >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="The temperature of your fish tanks is:"
-        android:textSize="65px"
+        android:textColor="@color/colorPrimary"
+        android:textSize="70px"
         />
     <EditText
         android:id="@+id/tempValue"

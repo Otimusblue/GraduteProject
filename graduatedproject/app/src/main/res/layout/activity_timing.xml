@@ -1,11 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TimingActivity"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:gravity="center"
+    android:background="#d9e9fa"
     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pick up your day"
+        android:textSize="100px"
+        android:paddingBottom="100px"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_gravity="center"
+        android:padding="10px"
+        >
+        <EditText
+            android:id="@+id/day_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="6"
+            android:maxEms="6"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE DAY"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Schedule your light"
+        android:textSize="70px"
+        android:textColor="@color/colorPrimary"
+        android:paddingTop="10px"
+        android:paddingBottom="40px"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10px"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TURN ON : "
+                android:textColor="@color/colorPrimary"
+                />
+            <EditText
+                android:id="@+id/set_on_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="6"
+                android:maxEms="6"
+                />
+            <Button
+                android:id="@+id/turn_on_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SET ON"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10px"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TURN OFF: "
+                android:textColor="@color/colorPrimary"
+
+                />
+            <EditText
+                android:id="@+id/set_off_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="6"
+                android:maxEms="6"
+                />
+            <Button
+                android:id="@+id/turn_off_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SET OFF"
+                />
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/submit_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SET LIGHT"
+            />
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule your fish"
+            android:layout_gravity="center"
+            android:textSize="70px"
+            android:textColor="@color/colorPrimary"
+            android:paddingTop="10px"
+            android:paddingBottom="40px"
+            android:textStyle="bold"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_gravity="center"
+            >
+            <EditText
+                android:id="@+id/set_feed_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="6"
+                android:maxEms="6"
+
+                />
+            <Button
+                android:id="@+id/set_feed_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SET ON"
+
+                />
+
+        </LinearLayout>
+    <Button
+        android:id="@+id/submit_feed_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SET FEED"
+        />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
