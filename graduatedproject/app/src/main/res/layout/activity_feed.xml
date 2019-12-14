@@ -7,25 +7,34 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".TempActivity"
+    tools:context=".FeedActivity"
     android:background="#d9e9fa"
+
     >
+
     <TextView
+        android:id="@+id/tv_feed"
         android:paddingLeft="50px"
         android:paddingRight="30px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The temperature of your fish tanks is:"
-        android:textColor="@color/colorPrimary"
+        android:text="Your fishes are hungry now. Do you want to feed ?"
         android:textSize="30dp"
-        android:paddingBottom="100px"
+        android:textColor="@color/colorPrimary"
+        android:paddingBottom="300px"
         />
-    <EditText
-        android:id="@+id/tempValue"
+    <Button
+        android:id="@+id/feed_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="...."
-        android:textSize="65px"
+        android:text="Feed"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="529dp"
         />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_button"
+        android:background="@null"
+        />
 </androidx.appcompat.widget.LinearLayoutCompat>
