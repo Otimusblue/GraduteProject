@@ -62,23 +62,23 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
             mDay = calendar.get(Calendar.DAY_OF_MONTH);
 
 
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            final DatePickerDialog datePickerDialog = new DatePickerDialog(this,R.style.MyDatePickerDialogTheme, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                     setTimeToDatabase = dayOfMonth+"-"+(month+1)+"-"+year;
                     day_edt.setText(dayOfMonth+"-"+(month+1)+"-"+year);
 
-
                 }
             },mYear,mMonth,mDay);
             datePickerDialog.show();
+
         }
         if (v == set_feed_btn){
             final Calendar calendar = Calendar.getInstance();
             mHour = calendar.get(Calendar.HOUR);
             mMinute = calendar.get(Calendar.MINUTE);
 
-            TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            TimePickerDialog timePickerDialog = new TimePickerDialog(this, R.style.MyTimePickerDialogTheme,new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                     feed_on_edt.setText(hourOfDay+":"+ minute);
@@ -95,10 +95,10 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
                     new android.os.Handler().postDelayed(new Runnable() {
                                                              @Override
                                                              public void run() {
-                                                                 rootRef.child("SETTIME").setValue("THANH CONG");
+                                                                 rootRef.child("SETTIME").setValue("hello");
                                                              }
                                                          },
-                            30*1000);
+                            3*1000);
                 }
 
 
