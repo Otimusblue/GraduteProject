@@ -20,8 +20,8 @@ import java.util.Calendar;
 public class TimingActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText day_edt, light_on_edt, light_off_edt, feed_on_edt;
-    Button day_btn, set_light_on_btn,set_light_off_btn, submit_light_btn, set_feed_btn,submit_feed_btn;
-    private int mYear,mMonth,mDay,mHour,mMinute;
+    Button day_btn, set_light_on_btn,set_light_off_btn, set_feed_btn,submit_feed_button, submit_led_button;
+    private int mYear,mMonth,mDay,mHour,mMinute,mHourLed,mMinuteLed;
     String setTimeToDatabase;
     DatabaseReference rootRef;
     @Override
@@ -37,19 +37,14 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
         day_btn = findViewById(R.id.date_button);
         set_light_off_btn = findViewById(R.id.turn_off_button);
         set_light_on_btn = findViewById(R.id.turn_on_button);
-        submit_light_btn = findViewById(R.id.submit_light);
         set_feed_btn = findViewById(R.id.set_feed_button);
-        submit_feed_btn = findViewById(R.id.submit_feed_button);
+        submit_feed_button = findViewById(R.id.submit_feed_button);
+        submit_led_button = findViewById(R.id.submit_led_button);
 
         day_btn.setOnClickListener(this);
         set_light_on_btn.setOnClickListener(this);
         set_light_off_btn.setOnClickListener(this);
         set_feed_btn.setOnClickListener(this);
-        submit_feed_btn.setOnClickListener(this);
-        submit_light_btn.setOnClickListener(this);
-
-
-
 
     }
 
@@ -65,7 +60,7 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
             final DatePickerDialog datePickerDialog = new DatePickerDialog(this,R.style.MyDatePickerDialogTheme, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    setTimeToDatabase = dayOfMonth+"-"+(month+1)+"-"+year;
+                    setTimeToDatabase = year+"-"+(month+1)+"-"+dayOfMonth;
                     day_edt.setText(dayOfMonth+"-"+(month+1)+"-"+year);
 
                 }
@@ -81,34 +76,31 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
             TimePickerDialog timePickerDialog = new TimePickerDialog(this, R.style.MyTimePickerDialogTheme,new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    feed_on_edt.setText(hourOfDay+":"+ minute);
+                    feed_on_edt.setText(String.format("%02d:%02d", hourOfDay, minute));
+                    rootRef.child("SCHEDULE/FEED/SET_ON").setValue(setTimeToDatabase+"T"+String.format("%02d:%02d", hourOfDay, minute));
                 }
             },mHour,mMinute,true);
             timePickerDialog.show();
 
 
 
-            rootRef.child("SETTIME").setValue(setTimeToDatabase+""+mHour+mMinute);
-            rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        }
+        if (v == set_light_on_btn) {
+            final Calendar calendar = Calendar.getInstance();
+            mHourLed = calendar.get(Calendar.HOUR);
+            mMinuteLed = calendar.get(Calendar.MINUTE);
+
+            TimePickerDialog timePickerDialogLed = new TimePickerDialog(this, R.style.MyTimePickerDialogTheme,new TimePickerDialog.OnTimeSetListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    new android.os.Handler().postDelayed(new Runnable() {
-                                                             @Override
-                                                             public void run() {
-                                                                 rootRef.child("SETTIME").setValue("hello");
-                                                             }
-                                                         },
-                            3*1000);
+                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                    light_on_edt.setText(String.format("%02d:%02d", hourOfDay, minute));
+                    rootRef.child("SCHEDULE/LED/SET_ON").setValue(setTimeToDatabase+"T"+String.format("%02d:%02d", hourOfDay, minute));
                 }
-
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });
+            },mHourLed,mMinuteLed,true);
+            timePickerDialogLed.show();
 
         }
+
     }
 
 

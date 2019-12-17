@@ -92,6 +92,7 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,16 +121,21 @@
                 android:layout_height="wrap_content"
                 android:text="SET OFF"
                 />
-
-
         </LinearLayout>
         <Button
-            android:id="@+id/submit_light"
+            android:id="@+id/submit_led_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="SET LED"
             android:layout_gravity="center"
-            android:text="SET LIGHT"
             />
+        <!--<Button-->
+            <!--android:id="@+id/submit_light"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="SET LIGHT"-->
+            <!--/>-->
     </LinearLayout>
 
         <TextView
@@ -148,8 +154,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="10"
+
             android:layout_gravity="center"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FEED : "
+                android:textColor="@color/colorPrimary"
+
+                />
             <EditText
                 android:id="@+id/set_feed_edt"
                 android:layout_width="wrap_content"
