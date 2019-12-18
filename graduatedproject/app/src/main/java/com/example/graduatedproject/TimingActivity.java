@@ -38,8 +38,8 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
         set_light_off_btn = findViewById(R.id.turn_off_button);
         set_light_on_btn = findViewById(R.id.turn_on_button);
         set_feed_btn = findViewById(R.id.set_feed_button);
-        submit_feed_button = findViewById(R.id.submit_feed_button);
-        submit_led_button = findViewById(R.id.submit_led_button);
+
+
 
         day_btn.setOnClickListener(this);
         set_light_on_btn.setOnClickListener(this);
@@ -98,6 +98,21 @@ public class TimingActivity extends AppCompatActivity implements View.OnClickLis
                 }
             },mHourLed,mMinuteLed,true);
             timePickerDialogLed.show();
+
+        }
+        if (v == set_light_off_btn){
+            final Calendar calendar = Calendar.getInstance();
+            mHourLed = calendar.get(Calendar.HOUR);
+            mMinuteLed = calendar.get(Calendar.MINUTE);
+
+            TimePickerDialog timePickerDialogLedOff = new TimePickerDialog(this, R.style.MyTimePickerDialogTheme,new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                    light_off_edt.setText(String.format("%02d:%02d", hourOfDay, minute));
+                    rootRef.child("SCHEDULE/LED/SET_OFF").setValue(setTimeToDatabase+"T"+String.format("%02d:%02d", hourOfDay, minute));
+                }
+            },mHourLed,mMinuteLed,true);
+            timePickerDialogLedOff.show();
 
         }
 

@@ -122,13 +122,6 @@
                 android:text="SET OFF"
                 />
         </LinearLayout>
-        <Button
-            android:id="@+id/submit_led_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SET LED"
-            android:layout_gravity="center"
-            />
         <!--<Button-->
             <!--android:id="@+id/submit_light"-->
             <!--android:layout_width="wrap_content"-->
@@ -183,14 +176,6 @@
                 />
 
         </LinearLayout>
-    <Button
-        android:id="@+id/submit_feed_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="SET FEED"
-        />
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
